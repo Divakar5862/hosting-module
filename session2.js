@@ -1,6 +1,6 @@
 var name,mothername,fathername,emailid,moblienumber;
 function validation(){
-  readform();
+  readForm();
   
   if(name ==""){
     alert("please enter your name");
@@ -28,8 +28,15 @@ function validation(){
   
   
 }
-function readform(){
+function readForm(){
   name = document.getElementById("yname").value;
   mothername= document.getElementById("mname").value;
-  fathername= document.getElement
+  fathername= document.getElementById("fname").value;
+  emailid= document.getElementById("mail").value;
+  moblienumber= document.grtElementById("num").value
+}
+document.getElementById("submit").onclick=function(){
+  readForm();
+  validation();
+  firebase.database().ref("submitted/"+name).set
 }
