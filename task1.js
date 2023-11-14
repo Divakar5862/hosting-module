@@ -46,3 +46,4 @@ signupForm.addEventListener('submit', (event) => {
         alert('Please fill in all fields.'); 
     }
 });
+document
