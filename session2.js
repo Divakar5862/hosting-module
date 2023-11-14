@@ -33,10 +33,17 @@ function readForm(){
   mothername= document.getElementById("mname").value;
   fathername= document.getElementById("fname").value;
   emailid= document.getElementById("mail").value;
-  moblienumber= document.grtElementById("num").value
+  moblienumber= document.getElementById("num").value
 }
 document.getElementById("submit").onclick=function(){
   readForm();
   validation();
-  firebase.database().ref("submitted/"+name).set
+  firebase.database().ref("submitted/"+name).set({
+    NAME:name, 
+    MOTHERNAME:mothername,
+    FATHERNAME:fathername,
+    EMAILID:emailid,
+    MOBLIENUMBER:moblienumber,
+  });
+  alert("form submitted");
 }
