@@ -1,4 +1,4 @@
-var name, age, collegename,department, emailid, phonenumber;
+var name, age, collegename, department, emailid, phonenumber;
 function validation() {
   readForm();
 
@@ -16,7 +16,7 @@ function validation() {
   }
   if (department == "") {
     alert("please enter your department ");
-    department.focus(); 
+    department.focus();
   }
   if (emailid == "") {
     alert("please enter your emailid");
@@ -26,7 +26,7 @@ function validation() {
     alert("please enter your phonenumber");
     phonenumber.focus();
   }
-  console.log(name, age, collegename,department, emailid, phonenumber);
+  console.log(name, age, collegename, department, emailid, phonenumber);
 }
 function readForm() {
   name = document.getElementById("yname").value;
@@ -40,14 +40,19 @@ document.getElementById("create").onclick = function () {
   validation();
   firebase
     .database()
-    .ref("submit/"+name)
+    .ref("submit/" + name)
     .set({
       NAME: name,
       AGE: age,
       COLLEGENAME: collegename,
-    DEPARTMENT:department,
+      DEPARTMENT: department,
       EMAILID: emailid,
       PHONENUMBER: phonenumber,
     });
   alert("form submitted");
+  name = document.getElementById("yname").value = "";
+  age = document.getElementById("old").value = "";
+  collegename = document.getElementById("cname").value = "";
+  emailid = document.getElementById("mail").value = "";
+  phonenumber = document.getElementById("mnumber").value = "";
 };
