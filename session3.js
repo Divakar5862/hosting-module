@@ -40,7 +40,7 @@ document.getElementById("create").onclick = function () {
   validation();
   firebase
     .database()
-    .ref("submit/" + name)
+    .ref("submit /" + name)
     .set({
       NAME: name,
       AGE: age,
