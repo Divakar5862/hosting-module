@@ -69,4 +69,12 @@ document.getElementById("submit").onclick = function () {
       GENDER:gender,
     });
   alert("form submitted");
+  firstname = document.getElementById("fname").value="";
+  lastname = document.getElementById("lname").value="";
+  age = document.getElementById("age").value="";
+  schoolname = document.getElementById("sname").value="";
+  tmark = document.getElementById("10mark").value="";
+  twmark = document.getElementById("12mark").value="";
+  coursedetails = document.getElementById("course").value="";
+  gender = document.getElementById("gen").value="";
 };

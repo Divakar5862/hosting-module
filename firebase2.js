@@ -1,10 +1,11 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyA2D5WMq8GycLuOxBtT11_HD0UE4k2NZGU",
-  authDomain: "divakarform-74190.firebaseapp.com",
-  projectId: "divakarform-74190",
-  storageBucket: "divakarform-74190.appspot.com",
-  messagingSenderId: "523176507768",
-  appId: "1:523176507768:web:f39b8d19b805d7153ff08d",
-  measurementId: "G-ZZEGYKRRM3",
-};
+    apiKey: "AIzaSyCRLP9TyD0pjewn_1oLMlny7IxS7c8EQ-Q",
+    authDomain: "da-form-3082e.firebaseapp.com",
+    databaseURL: "https://da-form-3082e-default-rtdb.firebaseio.com",
+    projectId: "da-form-3082e",
+    storageBucket: "da-form-3082e.appspot.com",
+    messagingSenderId: "178253988417",
+    appId: "1:178253988417:web:a1f333722704dd8ca3fcc0",
+    measurementId: "G-KV4GG01MYW"
+  };
 firebase.initializeApp(firebaseConfig);
