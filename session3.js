@@ -61,7 +61,24 @@ document.getElementById("create").onclick = function () {
 document.getElementById("read").onclick=function(){
   readForm();
   firebase.database().ref("create/"+name).on("value",function(snap){
-    document.getElementById("yname").value=snap.
+    document.getElementById("yname").value=snap.val().NAME;
+    document.getElementById("old").value=snap.val().AGE;
+    document.getElementById("cname").value=snap.val().COLLEGENAME;
+    document.getElementById("dname").value=snap.val().DEPARTMENT;
+    document.getElementById("mail").value=snap.val().EMAILID;
+    document.getElementById("mnumber").value=snap.val().PHONENUMBER;
     
   })
 }
+document.getElementById.("update").onclick=function(){
+  readForm();
+  firebase.database().ref("create/"+name).update({
+    NAME:name,
+    AGE:age,
+    COLLEGENAME:collegename,
+    DEPARTMENT:department,
+    E
+    
+  })
+  
+} 
