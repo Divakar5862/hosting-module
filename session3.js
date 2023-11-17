@@ -70,15 +70,37 @@ document.getElementById("read").onclick=function(){
     
   })
 }
-document.getElementById.("update").onclick=function(){
+document.getElementById("update").onclick=function(){
   readForm();
   firebase.database().ref("create/"+name).update({
     NAME:name,
     AGE:age,
     COLLEGENAME:collegename,
     DEPARTMENT:department,
-    E
+    EMAILID:emailid,
+    PHONENUMBER:phonenumber,
     
   })
+  alert("data updated");
+   name = document.getElementById("yname").value = "";
+  age = document.getElementById("old").value = "";
+  collegename = document.getElementById("cname").value = "";
+  department=document.getElementById("dname").value="";
+  emailid = document.getElementById("mail").value = "";
+  phonenumber = document.getElementById("mnumber").value = "";
   
 } 
+document.getElementById("delete").onclick=function(){
+  readForm();
+  firebase.database().ref("create/"+name).remove();
+  alert("data deleted");
+  name = document.getElementById("yname").value = "";
+  age = document.getElementById("old").value = "";
+  collegename = document.getElementById("cname").value = "";
+  department=document.getElementById("dname").value="";
+  emailid = document.getElementById("mail").value = "";
+  phonenumber = document.getElementById("mnumber").value = "";
+  
+  
+  
+}
