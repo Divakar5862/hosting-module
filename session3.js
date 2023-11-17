@@ -32,6 +32,7 @@ function readForm() {
   name = document.getElementById("yname").value;
   age = document.getElementById("old").value;
   collegename = document.getElementById("cname").value;
+  department=document.getElementById("dname").value;
   emailid = document.getElementById("mail").value;
   phonenumber = document.getElementById("mnumber").value;
 }
@@ -53,6 +54,14 @@ document.getElementById("create").onclick = function () {
   name = document.getElementById("yname").value = "";
   age = document.getElementById("old").value = "";
   collegename = document.getElementById("cname").value = "";
+  department=document.getElementById("dname").value="";
   emailid = document.getElementById("mail").value = "";
   phonenumber = document.getElementById("mnumber").value = "";
 };
+document.getElementById("read").onclick=function(){
+  readForm();
+  firebase.database().ref("create/"+name).on("value",function(snap){
+    document.getElementById("yname").value=snap.
+    
+  })
+}
