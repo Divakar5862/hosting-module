@@ -44,63 +44,58 @@ document.getElementById("create").onclick = function () {
     .ref("create/"+name)
     .set({
       NAME: name,
-      THEATERNAME: thear,
-      COLLEGENAME: collegename,
-      DEPARTMENT: department,
-      EMAILID: emailid,
-      PHONENUMBER: phonenumber,
+      THEATERNAME:theatername,
+    TICKETSCOUNT:ticketscount,
+      CATEGORY:category,
+      SEATNUMBER:seatnumber,
+      TOTALCOST:totalcost
     });
   alert("form submitted");
-  name = document.getElementById("yname").value = "";
-  age = document.getElementById("old").value = "";
-  collegename = document.getElementById("cname").value = "";
-  department=document.getElementById("dname").value="";
-  emailid = document.getElementById("mail").value = "";
-  phonenumber = document.getElementById("mnumber").value = "";
+  name = document.getElementById("yname").value ="";
+  theatername= document.getElementById("tname").value="";
+  ticketscount= document.getElementById("tcount").value="";
+  category=document.getElementById("cat").value="";
+  seatnumber= document.getElementById("snum").value="";
+  totalcost = document.getElementById("tcost").value="";
 };
 document.getElementById("read").onclick=function(){
   readForm();
   firebase.database().ref("create/"+name).on("value",function(snap){
     document.getElementById("yname").value=snap.val().NAME;
-    document.getElementById("old").value=snap.val().AGE;
-    document.getElementById("cname").value=snap.val().COLLEGENAME;
-    document.getElementById("dname").value=snap.val().DEPARTMENT;
-    document.getElementById("mail").value=snap.val().EMAILID;
-    document.getElementById("mnumber").value=snap.val().PHONENUMBER;
+    document.getElementById("tname").value=snap.val().THEATERNAME;
+    document.getElementById("tcount").value=snap.val().TICKETSCOUNT;
+    document.getElementById("cat").value=snap.val().CATEGORY;
+    document.getElementById("snum").value=snap.val().SEATNUMBER;
+    document.getElementById("tcost").value=snap.val().TOTALCSOT;
     
   })
 }
 document.getElementById("update").onclick=function(){
   readForm();
   firebase.database().ref("create/"+name).update({
-    NAME:name,
-    AGE:age,
-    COLLEGENAME:collegename,
-    DEPARTMENT:department,
-    EMAILID:emailid,
-    PHONENUMBER:phonenumber,
-    
+   NAME: name,
+      THEATERNAME:theatername,
+    TICKETSCOUNT:ticketscount,
+      CATEGORY:category,
+      SEATNUMBER:seatnumber,
+      TOTALCOST:totalcost  
   })
   alert("data updated");
-   name = document.getElementById("yname").value = "";
-  age = document.getElementById("old").value = "";
-  collegename = document.getElementById("cname").value = "";
-  department=document.getElementById("dname").value="";
-  emailid = document.getElementById("mail").value = "";
-  phonenumber = document.getElementById("mnumber").value = "";
-  
+    name = document.getElementById("yname").value ="";
+  theatername= document.getElementById("tname").value="";
+  ticketscount= document.getElementById("tcount").value="";
+  category=document.getElementById("cat").value="";
+  seatnumber= document.getElementById("snum").value="";
+  totalcost = document.getElementById("tcost").value="";
 } 
 document.getElementById("delete").onclick=function(){
   readForm();
   firebase.database().ref("create/"+name).remove();
   alert("data deleted");
-  name = document.getElementById("yname").value = "";
-  age = document.getElementById("old").value = "";
-  collegename = document.getElementById("cname").value = "";
-  department=document.getElementById("dname").value="";
-  emailid = document.getElementById("mail").value = "";
-  phonenumber = document.getElementById("mnumber").value = "";
-  
-  
-  
+   name = document.getElementById("yname").value ="";
+  theatername= document.getElementById("tname").value="";
+  ticketscount= document.getElementById("tcount").value="";
+  category=document.getElementById("cat").value="";
+  seatnumber= document.getElementById("snum").value="";
+  totalcost = document.getElementById("tcost").value=""; 
 }
