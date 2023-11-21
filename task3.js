@@ -6,9 +6,9 @@ function validation() {
     alert("please enter your name");
     name.focus();
   }
-  if (theatername == "") {
-    alert("please enter your theatername");
-    theatername.focus();
+  if (moviename == "") {
+    alert("please enter your moviename");
+    moviename.focus();
   }
   if (ticketscount == "") {
     alert("please enter your ticketscount  ");
@@ -26,11 +26,11 @@ function validation() {
     alert("please enter your totalcost");
   totalcost.focus();
   }
-  console.log(name,theatername,ticketscount,category,seatnumber,totalcost);
+  console.log(name,moviename,ticketscount,category,seatnumber,totalcost);
 }
 function readForm() {
   name = document.getElementById("yname").value;
-  theatername= document.getElementById("tname").value;
+  moviename= document.getElementById("tname").value;
   ticketscount= document.getElementById("tcount").value;
   category=document.getElementById("cat").value;
   seatnumber= document.getElementById("snum").value;
@@ -44,7 +44,7 @@ document.getElementById("create").onclick = function () {
     .ref("create/"+name)
     .set({
       NAME: name,
-      THEATERNAME:theatername,
+      MOVIENAME:moviename,
     TICKETSCOUNT:ticketscount,
       CATEGORY:category,
       SEATNUMBER:seatnumber,
@@ -52,7 +52,7 @@ document.getElementById("create").onclick = function () {
     });
   alert("form submitted");
   name = document.getElementById("yname").value ="";
-  theatername= document.getElementById("tname").value="";
+  moviename= document.getElementById("tname").value="";
   ticketscount= document.getElementById("tcount").value="";
   category=document.getElementById("cat").value="";
   seatnumber= document.getElementById("snum").value="";
@@ -62,7 +62,7 @@ document.getElementById("read").onclick=function(){
   readForm();
   firebase.database().ref("create/"+name).on("value",function(snap){
     document.getElementById("yname").value=snap.val().NAME;
-    document.getElementById("tname").value=snap.val().THEATERNAME;
+    document.getElementById("tname").value=snap.val().MOVIENAME;
     document.getElementById("tcount").value=snap.val().TICKETSCOUNT;
     document.getElementById("cat").value=snap.val().CATEGORY;
     document.getElementById("snum").value=snap.val().SEATNUMBER;
@@ -74,15 +74,15 @@ document.getElementById("update").onclick=function(){
   readForm();
   firebase.database().ref("create/"+name).update({
    NAME: name,
-      THEATERNAME:theatername,
-    TICKETSCOUNT:ticketscount,
+       MOVIENAME:moviename,
+    TICKETSCOUNT:ticketscount, 
       CATEGORY:category,
       SEATNUMBER:seatnumber,
       TOTALCOST:totalcost  
   })
   alert("data updated");
     name = document.getElementById("yname").value ="";
-  theatername= document.getElementById("tname").value="";
+  moviename= document.getElementById("tname").value="";
   ticketscount= document.getElementById("tcount").value="";
   category=document.getElementById("cat").value="";
   seatnumber= document.getElementById("snum").value="";
@@ -93,7 +93,7 @@ document.getElementById("delete").onclick=function(){
   firebase.database().ref("create/"+name).remove();
   alert("data deleted");
    name = document.getElementById("yname").value ="";
-  theatername= document.getElementById("tname").value="";
+  moviename= document.getElementById("tname").value="";
   ticketscount= document.getElementById("tcount").value="";
   category=document.getElementById("cat").value="";
   seatnumber= document.getElementById("snum").value="";
