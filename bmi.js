@@ -54,7 +54,11 @@ else{
     tips1=tips.innerHTML;
     
   }
-  el
+  else{
+    console.log("check your input");
+    result.innerHTML="<h2>"+"the user is the user is facing obese kindly check with your doctor and take immediate action"+"</h2>";
+  }
   
   
 }
+
