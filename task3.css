@@ -1,0 +1,28 @@
+body{
+  color:red;
+  font-size: 30px;
+        font-style: italic;
+        text-align: center;
+        background-image: url("https://img.freepik.com/premium-photo/people-ticket-booth-theatre-with-bokeh-light_7189-1720.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+      #create:hover {
+        background-color: blue;
+      }
+#update:hover{
+  background-color:red;
+}
+#read:hover{
+  background-color:pink;
+}
+#delete:hover{
+  background-color:yellow;
+}
+      button {
+        font-size: 30px;
+      }
+  
+  
+}
