@@ -7,6 +7,10 @@ body{
         background-size: cover;
         background-attachment: fixed;
       }
+label{
+  color:#DC7633;
+  font-size:35px;
+}
       #create:hover {
         background-color: blue;
       }
