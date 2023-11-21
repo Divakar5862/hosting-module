@@ -1,4 +1,4 @@
-var name,theatername,ticketscount,category,seatnumber,totalcost;
+var name,moviename,ticketscount,category,seatnumber,totalcost;
 function validation() {
   readForm();
 
