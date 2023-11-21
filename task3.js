@@ -1,4 +1,4 @@
-var name, thea, collegename, department, emailid, phonenumber;
+var name,theatername,ticketscount,category,seatnumber,totalcost;
 function validation() {
   readForm();
 
@@ -6,35 +6,35 @@ function validation() {
     alert("please enter your name");
     name.focus();
   }
-  if (age == "") {
-    alert("please enter your age");
-    age.focus();
+  if (theatername == "") {
+    alert("please enter your theatername");
+    theatername.focus();
   }
-  if (collegename == "") {
-    alert("please enter your collegename ");
-    collegename.focus();
+  if (ticketscount == "") {
+    alert("please enter your ticketscount  ");
+    ticketscount.focus();
   }
-  if (department == "") {
-    alert("please enter your department ");
-    department.focus();
+  if (category == "") {
+    alert("please enter your category ");
+    category.focus();
   }
-  if (emailid == "") {
-    alert("please enter your emailid");
-    emailid.focus();
+  if (seatnumber == "") {
+    alert("please enter your seatnumber");
+    seatnumber.focus();
   }
-  if (phonenumber == "") {
-    alert("please enter your phonenumber");
-    phonenumber.focus();
+  if (totalcost == "") {
+    alert("please enter your totalcost");
+  totalcost.focus();
   }
-  console.log(name, age, collegename, department, emailid, phonenumber);
+  console.log(name,theatername,ticketscount,category,seatnumber,totalcost);
 }
 function readForm() {
   name = document.getElementById("yname").value;
-  age = document.getElementById("old").value;
-  collegename = document.getElementById("cname").value;
-  department=document.getElementById("dname").value;
-  emailid = document.getElementById("mail").value;
-  phonenumber = document.getElementById("mnumber").value;
+  theatername= document.getElementById("tname").value;
+  ticketscount= document.getElementById("tcount").value;
+  category=document.getElementById("cat").value;
+  seatnumber= document.getElementById("snum").value;
+  totalcost = document.getElementById("tcost").value;
 }
 document.getElementById("create").onclick = function () {
   readForm();
@@ -44,7 +44,7 @@ document.getElementById("create").onclick = function () {
     .ref("create/"+name)
     .set({
       NAME: name,
-      AGE: age,
+      THEATERNAME: thear,
       COLLEGENAME: collegename,
       DEPARTMENT: department,
       EMAILID: emailid,
