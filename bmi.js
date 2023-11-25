@@ -64,6 +64,20 @@ function readForm(){
   var result=document.getElementById("bmiresult");
   var tips=document.getElementById("bmiresult1");
   var feet=document.getElementById("bmifeet");
-  var k
+  var kg=document.getElementById("weight");
   
+}
+document.getElementById("submit").onclick=function(){
+  calculatebmi();
+  readForm();
+  firebase.database().ref("submitted/").set({
+    RESULT:result1,
+    TIPS:tips1,
+    FEET:feet,
+    KG:kg,
+    
+  })
+  alert("data submitted");
+  result=document.getElementById("bmiresult").value="";
+  tips=document.getElementById("")
 }
