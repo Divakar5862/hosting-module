@@ -2,11 +2,20 @@
     font-size:20px;
     font-style:italic;
      text-align:center;
-      background-color:skyblue;  
+       background-image: url("https://i.pinimg.com/736x/d6/12/99/d61299e50d705d860c899f4fe0591773.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed; 
       
       }
 #submit:hover{
   background-color:red;
+  font-size:30px;
+}
+button{
+  font-size:30px;
+}
+label{
   font-size:30px;
 }
           
