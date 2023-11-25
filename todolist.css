@@ -1,5 +1,12 @@
 body{
   text-align:center;
-  font-size:30px
-    background-image:url("")
+  font-size:30px;
+  background: linear-gradient(to bottom, #33ccff 0%, #99ff99 100%);
+  
+    
+    
+}
+ul{
+  font-size:25px;
+  text-align:center;
 }
