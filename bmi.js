@@ -78,6 +78,6 @@ document.getElementById("submit").onclick=function(){
     
   })
   alert("data submitted");
-  result=document.getElementById("bmiresult").value="";
-  tips=document.getElementById("")
+  feet=document.getElementById("bmifeet").value="";
+  kg=document.getElementById("weight").value="";
 }
