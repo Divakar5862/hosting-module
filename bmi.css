@@ -1,0 +1,12 @@
+ body{
+    font-size:20px;
+    font-style:italic;
+     text-align:center;
+      background-color:skyblue;  
+      
+      }
+#submit:hover{
+  background-color:red;
+  font-size:30px;
+}
+          
