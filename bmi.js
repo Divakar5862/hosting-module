@@ -4,7 +4,7 @@ function calculatebmi() {
   tips = document.getElementById("bmiresult1");
   feet = document.getElementById("bmifeet");
   kg = document.getElementById("weight");
-}
+
 if (kg.value == "" || feet.value == "") {
   alert("please enter your weight and feet");
 } else {
@@ -58,4 +58,12 @@ if (kg.value == "" || feet.value == "") {
       "the user is the user is facing obese kindly check with your doctor and take immediate action" +
       "</h2>";
   }
+}
+}
+function readForm(){
+  var result=document.getElementById("bmiresult");
+  var tips=document.getElementById("bmiresult1");
+  var feet=document.getElementById("bmifeet");
+  var k
+  
 }
