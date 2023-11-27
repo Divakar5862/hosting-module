@@ -8,7 +8,7 @@
         FIRE STORE TODO LIST
       </h1>
       <input type="text" id="home" placeholder="enter your task">
-      <button>
+      <button onclick="addTask()">
         Add task
       </button>
       <ul id="tasklist">
@@ -26,7 +26,28 @@
   };
         firebase.initializeApp(firebaseConfig);
         const db=firebase.firestore();
-        function addtast
+        function addTask(){
+          const home=document.getElementById("home");
+          const task=home.value.trim();
+          if(task!==""){
+            db.collection("task")
+            .add({
+              task:task,
+              
+            })
+            .then(()=>{
+              home.value="";
+              getTasks();
+              
+            })
+            .catch((error)=>{
+              console.error("error accured",error)
+              
+            })
+            
+          }
+          
+        }
       </script>
     </body>
 </html>
