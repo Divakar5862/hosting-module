@@ -1,6 +1,8 @@
 <html>
   <head>
     <title>todolist</title>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-firestore-compat.js"></script>
     <link rel="stylesheet" href="todolist.css">
   </head>
     <body>
@@ -53,17 +55,22 @@
           taskList.innerHTML="";
           db.collection("tasks")
           .get().then((querySnapshot)=>{
-            qureySnapshot.forEach((doc)=>{
+            querySnapshot.forEach((doc)=>{
               const taskData=doc.data();
               const taskItem=document.createElement("li");
               taskItem.textContent=taskData.task;
-              taskList.appendC
+              taskList.appendChild(taskItem);
               
+
             })
             
           })
           
         }
+        document.addEventListener("DOMContentLoaded",function(){
+          getTasks();
+          
+        })
       </script>
     </body>
 </html>
