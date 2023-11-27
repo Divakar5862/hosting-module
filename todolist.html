@@ -11,7 +11,7 @@
       <button onclick="addTask()">
         Add task
       </button>
-      <ul id="tasklist">
+      <ul id="taskList">
         
       </ul>
       <script>
@@ -46,6 +46,22 @@
             })
             
           }
+          
+        }
+        function getTasks(){
+          const taskList=document.getElementById("taskList");
+          taskList.innerHTML="";
+          db.collection("tasks")
+          .get().then((querySnapshot)=>{
+            qureySnapshot.forEach((doc)=>{
+              const taskData=doc.data();
+              const taskItem=document.createElement("li");
+              taskItem.textContent=taskData.task;
+              taskList.appendC
+              
+            })
+            
+          })
           
         }
       </script>
