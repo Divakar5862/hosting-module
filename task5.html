@@ -8,19 +8,19 @@
   </head>
   <body>
     <h1>FIRE STORE TODO LIST</h1>
-    <input type="text" id="home" placeholder="enter your task" />
+    <input type="text" id="work" placeholder="enter your task" />
     <button onclick="addTask()">Add task</button>
     <ul id="taskList"></ul>
     <script>
-      const firebaseConfig = {
-        apiKey: "AIzaSyBqTUfH3Fu_Si66_W3awcZRiMkQpUqEi_E",
-        authDomain: "todolist-c23b4.firebaseapp.com",
-        projectId: "todolist-c23b4",
-        storageBucket: "todolist-c23b4.appspot.com",
-        messagingSenderId: "265499853672",
-        appId: "1:265499853672:web:38464e6ccd3f4916a54cdd",
-        measurementId: "G-M28V15PQXG",
-      };
+     const firebaseConfig = {
+    apiKey: "AIzaSyAEOlCHSsmUUqlkVZzGVnVSZIgmZgtapiE",
+    authDomain: "todolist1-dedc3.firebaseapp.com",
+    projectId: "todolist1-dedc3",
+    storageBucket: "todolist1-dedc3.appspot.com",
+    messagingSenderId: "689854240198",
+    appId: "1:689854240198:web:849cc55cae4527d8348ec7",
+    measurementId: "G-85V2L6069E"
+  };
       firebase.initializeApp(firebaseConfig);
       const db = firebase.firestore();
       function addTask() {
