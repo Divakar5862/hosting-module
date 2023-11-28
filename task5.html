@@ -1,0 +1,62 @@
+
+<html>
+  <head>
+    <title>todolist</title>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-firestore-compat.js"></script>
+    <link rel="stylesheet" href="todolist.css" />
+  </head>
+  <body>
+    <h1>FIRE STORE TODO LIST</h1>
+    <input type="text" id="home" placeholder="enter your task" />
+    <button onclick="addTask()">Add task</button>
+    <ul id="taskList"></ul>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyBqTUfH3Fu_Si66_W3awcZRiMkQpUqEi_E",
+        authDomain: "todolist-c23b4.firebaseapp.com",
+        projectId: "todolist-c23b4",
+        storageBucket: "todolist-c23b4.appspot.com",
+        messagingSenderId: "265499853672",
+        appId: "1:265499853672:web:38464e6ccd3f4916a54cdd",
+        measurementId: "G-M28V15PQXG",
+      };
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+      function addTask() {
+        const home = document.getElementById("home");
+        const task = home.value.trim();
+        if (task !== "") {
+          db.collection("tasks")
+            .add({
+              task: task,
+            })
+            .then(() => {
+              home.value = "";
+              getTasks();
+            })
+            .catch((error) => {
+              console.error("error accured", error);
+            });
+        }
+      }
+      function getTasks() {
+        const taskList = document.getElementById("taskList");
+        taskList.innerHTML = "";
+        db.collection("tasks")
+          .get()
+          .then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+              const taskData = doc.data();
+              const taskItem = document.createElement("li");
+              taskItem.textContent = taskData.task;
+              taskList.appendChild(taskItem);
+            });
+          });
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        getTasks();
+      });
+    </script>
+  </body>
+</html>
