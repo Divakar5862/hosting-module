@@ -1,0 +1,20 @@
+body{
+font-size:40px;
+  text-align:center;
+    font-style:bold;
+     text-align:center;
+  background-image:url("https://media.istockphoto.com/id/1362441807/vector/indikator-bmi-on-white-background-chart-concept-vector-icon.jpg?s=612x612&w=0&k=20&c=V-LAzzmOIZTIds6Xa_49EG4aSenpQbmUcSFq5FKIRbE=");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed; 
+      
+      }
+#submit:hover{
+  background-color:red;
+  font-size:30px;
+}
+ul{
+  font-size:30px;
+  text-align:center;
+  color:red;
+}
