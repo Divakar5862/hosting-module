@@ -6,7 +6,6 @@
 
 html,
 
-/****************HEADER SECTION****************/
 .header {
 	background: #0055a4;
 	padding: 6px;
@@ -20,7 +19,8 @@ html,
 }
 
 .header marquee {
-	font-size: 20px;
+  font-style:bold;
+	font-size: 50px;
 	color: #ffffff;
 	width: 80%;
 }body {
@@ -32,16 +32,13 @@ html,
 .container {
 	width: 1300px;
 	margin: 0px auto;
+  font-size:30px;
+  font-style:bold;
 }
-/****************HEADER SECTION****************/
-.
-/**********LOGO SECTION**********/
 .logo {
 	height :65px;
  
 }
-
-/**********MENU SECTION**********/
 nav {
 	float: right;
 	padding: 25px 0px;
@@ -70,12 +67,10 @@ nav a {
 	color: #ffffff;
 	width: 80%;
 }
-/**********LOGO SECTION**********/
 .logo {
 	height: 65px;
 }
 
-/**********MENU SECTION**********/
 nav {
 	float: right;
 	padding: 25px 0px;
@@ -88,7 +83,6 @@ nav a {
 	padding: 2px 10px;
 	font-weight: 500;
 }
-/*****SLIDER SECTION*****/
 .slider img {
 	width: 100%;
 }
@@ -141,8 +135,6 @@ nav a {
 	padding: 8px 12px;
 	margin-right: 10px;
 }
-
-/*******CAMPUS NEWS SECTION***********/
 .campus-news span {
 	width: 80px;
 	float: left;
@@ -162,7 +154,6 @@ nav a {
 .campus-news p {
 	font-size: 14px;
 }
-/****************ABOUT US SECTION****************/
 .heading {
 	font-size: 28px;
 	font-weight: 500;
@@ -200,8 +191,6 @@ nav a {
 	width: 40%;
 	float: left;
 }
-
-/****************AWARD SECTION****************/
 .award p {
 	width: 100%;
 	float: left;
@@ -223,8 +212,6 @@ nav a {
 	margin-bottom: 20px;
 	text-align: center;
 }
-
-/****************CHAIRMAN SECTION****************/
 .chairman img {
 	width: 150px;
 	float: left;
@@ -235,7 +222,6 @@ nav a {
 	font-size: 22px;
 	margin-top: 30px;
 }
-/****************TESTIMONIAL SECTION****************/
 .testimonial {
 	width: 30.5%;
 	float: left;
@@ -275,13 +261,11 @@ nav a {
 	color: red;
 	font-weight: 400;
 }
-/****************GALLERY SECTION****************/
 .gallery img {
 	width: 23.2%;
 	margin-right: 1.5%;
 	margin-bottom: 20px;
 }
-/****************FOOTER SECTION****************/
 .footer {
 	background-color: #f0f3fa;
 	padding: 40px 0px;
@@ -306,6 +290,7 @@ nav a {
 	color: #202020;
 	margin-left: 10px;
 	text-decoration: none;
+  font-style:bold;
 }
 
 
